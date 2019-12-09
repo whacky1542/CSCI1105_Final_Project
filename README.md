@@ -13,21 +13,21 @@ Simply follow the prompts to use this straight foward program.
 This is an example of how the program displays user written text back to the user with lines the length of 50 characters without cutting apart words.
 ```
 for (int i = 0; i < display.length(); i++) {
-			if (display.charAt(i) == ' ') {
-				  while (display.charAt(i + wordLength - 1) != ' ') {
-					    wordLength++;
-				  }
+	if (display.charAt(i) == ' ') {
+		while (display.charAt(i + wordLength - 1) != ' ') {
+			wordLength++;
+		}
 
-				  if (wordLength + lineCount > 50) {
-					    System.out.println();
-					    lineCount = 0;
-				  }
+		if (wordLength + lineCount > 50) {
+			System.out.println();
+			lineCount = 0;
+		}
 
-				  wordLength = 1;
-			}
+		wordLength = 1;
+	}
 
-			System.out.print(display.charAt(i));
+	System.out.print(display.charAt(i));
 
-			lineCount++;
+	lineCount++;
 }
 ```
