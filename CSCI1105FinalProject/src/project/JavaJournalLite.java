@@ -165,7 +165,7 @@ public class JavaJournalLite {
 			
 			System.out.print("\n--------------------------------------------------\n");
 			
-			System.out.print("Write something in -" + entries[entry][0] + "-: ");
+			System.out.print("Write something in -" + entries[entry][0] + "- (enter \\\"quit\\\" to exit, or enter \\\"enter\\\" to insert a line): ");
 			uInput = input.nextLine();
 			
 		}
