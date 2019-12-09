@@ -7,7 +7,8 @@ Java Journal Lite is a program that simulates a temporary journal that allows th
 As a final project for my CSCI 1105 class at Southwest Technical College, this program showcases most of what I learned throughout the class in a single project.
 
 ## How to use:
-Simply follow the prompts to use this straight foward program.
+Simply follow the prompts to use this straight foward program. For example:
+<img src="Example.png" />
 
 ## Code Example:
 This is an example of how the program displays user written text back to the user with lines the length of 50 characters without cutting apart words.
