@@ -127,16 +127,24 @@ public class JavaJournalLite {
 		
 		lineCount = 0;
 		
-		System.out.print("Write something in -" + entries[entry][0] + "- (enter \"quit\" to exit): ");
+		System.out.print("Write something in -" + entries[entry][0] + "- (enter \"quit\" to exit, or enter \"enter\" to insert a line): ");
 		uInput = input.nextLine();
-
+		
 		while (!uInput.toLowerCase().equals("quit")) {
 			
-			display += uInput;
+			if (uInput.toLowerCase().equals("enter")) {
+				for (int i = 0; i < 51 - lineCount; i++)
+					display += " ";
+			}
+			else
+				display += uInput;
+			
+			lineCount = 0;
 			
 			System.out.print("--------------------------------------------------\n");
 			
 			for (int i = 0; i < display.length(); i++) {
+				
 				if (display.charAt(i) == ' ') {
 					while (display.charAt(i + wordLength - 1) != ' ') {
 						wordLength++;
@@ -160,7 +168,6 @@ public class JavaJournalLite {
 			System.out.print("Write something in -" + entries[entry][0] + "-: ");
 			uInput = input.nextLine();
 			
-			lineCount = 0;
 		}
 		
 		entries[entry][1] += display;
